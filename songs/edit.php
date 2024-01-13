@@ -9,14 +9,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $lyrics = $_POST["lyrics"];
 
     // Update the song in the database
-    $query = "UPDATE songs SET title='$title', artist='$artist', lyrics='$lyrics' WHERE id=$id";
+    $query = "UPDATE songs SET title=?, artist=?, lyrics=? WHERE id=?";
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("sssi", $title, $artist, $lyrics, $id);
 
-    if ($conn->query($query) === TRUE) {
+    if ($stmt->execute()) {
         echo '<div class="alert alert-success" role="alert">Song updated successfully!</div>';
         header("Location: home.php");
+        exit;
     } else {
-        echo '<div class="alert alert-danger" role="alert">Error updating song: ' . $conn->error . '</div>';
+        echo '<div class="alert alert-danger" role="alert">Error updating song: ' . $stmt->error . '</div>';
     }
+
+    $stmt->close();
 }
 
 // Check if an id parameter is provided in the URL
