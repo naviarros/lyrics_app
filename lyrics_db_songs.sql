@@ -26,7 +26,7 @@ CREATE TABLE `songs` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
   `artist` varchar(255) NOT NULL,
-  `lyrics` text NOT NULL,
+  `lyrics` longtext NOT NULL,
   `date_created` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `date_updated` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
@@ -39,6 +39,7 @@ CREATE TABLE `songs` (
 
 LOCK TABLES `songs` WRITE;
 /*!40000 ALTER TABLE `songs` DISABLE KEYS */;
+INSERT INTO `songs` VALUES (2,'All of me','John Legend','What would I do without your smart mouth?\r\nDrawing me in, and you kicking me out\r\nYou\'ve got my head spinning, no kidding, I can\'t pin you down\r\nWhat\'s going on in that beautiful mind?\r\nI\'m on your magical mystery ride\r\nAnd I\'m so dizzy, don\'t know what hit me, but I\'ll be alright\r\nMy head\'s under water\r\nBut I\'m breathing fine\r\nYou\'re crazy and I\'m out of my mind\r\n\'Cause all of me\r\nLoves all of you\r\nLove your curves and all your edges\r\nAll your perfect imperfections\r\nGive your all to me\r\nI\'ll give my all to you\r\nYou\'re my end and my beginning\r\nEven when I lose, I\'m winning\r\n\'Cause I give you all of me\r\nAnd you give me all of you, oh-oh\r\nHow many times do I have to tell you?\r\nEven when you\'re crying, you\'re beautiful too\r\nThe world is beating you down, I\'m around through every mood\r\nYou\'re my downfall, you\'re my muse\r\nMy worst distraction, my rhythm and blues\r\nI can\'t stop singing, it\'s ringing in my head for you\r\nMy head\'s under water\r\nBut I\'m breathing fine\r\nYou\'re crazy and I\'m out of my mind\r\n\'Cause all of me\r\nLoves all of you\r\nLove your curves and all your edges\r\nAll your perfect imperfections\r\nGive your all to me\r\nI\'ll give my all to you\r\nYou\'re my end and my beginning\r\nEven when I lose, I\'m winning\r\n\'Cause I give you all of me\r\nAnd you give me all of you, oh-oh\r\nGive me all of you, oh\r\nCards on the table, we\'re both showing hearts\r\nRisking it all, though it\'s hard\r\n\'Cause all of me\r\nLoves all of you\r\nLove your curves and all your edges\r\nAll your perfect imperfections\r\nGive your all to me\r\nI\'ll give my all to you\r\nYou\'re my end and my beginning\r\nEven when I lose, I\'m winning\r\n\'Cause I give you all of me\r\nAnd you give me all of you\r\nI give you all of me\r\nAnd you give me all of you, oh-oh','2024-01-13 08:50:31','2024-01-13 08:50:31');
 /*!40000 ALTER TABLE `songs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-01-13 16:33:44
+-- Dump completed on 2024-01-13 16:50:51
