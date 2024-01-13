@@ -28,6 +28,7 @@
                     <th scope="col">Title</th>
                     <th scope="col">Artist</th>
                     <th scope="col">Lyrics</th>
+                    <th scope="col">Date Created</th>
                     <th scope="col">Action</th>
                 </tr>
             </thead>
@@ -44,6 +45,7 @@
                                 <td><?php echo $row['title']; ?></td>
                                 <td><?php echo $row['artist']; ?></td>
                                 <td><?php echo $row['lyrics']; ?></td>
+                                <td><?php echo $row['date_created']?></td>
                                 <td>
                                     <!-- Add any actions you want for each row -->
                                     <!-- Example: Edit and Delete links -->
